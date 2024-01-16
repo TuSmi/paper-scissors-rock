@@ -31,25 +31,17 @@
 
 
         if (playerSelection === computerSelection) {
-            console.log("It's a tie! Choose again");
-            playerSelection = getPlayerChoice();
+        return ("It's a tie! Choose again");
         } 
         
-        else if (playerSelection === "paper" && computerSelection === "rock") {
-            playerScore++;
-            return `You win! ${playerSelection} beats ${computerSelection}`;
-        } 
-        
-        else if (playerSelection === "rock" && computerSelection === "scissors") {
-            playerScore++;
-            return `You win! ${playerSelection} beats ${computerSelection}`;
-        } 
-        
-
-        else if (playerSelection === "scissors" && computerSelection === "paper") {
-            playerScore++;
-            return `You win! ${playerSelection} beats ${computerSelection}`;
-        } 
+        else if (
+            (playerSelection === "paper" && computerSelection === "rock") ||
+            (playerSelection === "rock" && computerSelection === "scissors") ||
+            (playerSelection === "scissors" && computerSelection === "paper")) 
+            {
+                playerScore++;
+                return `You win! ${playerSelection} beats ${computerSelection}`;
+            } 
         
         else {
             computerScore++;
